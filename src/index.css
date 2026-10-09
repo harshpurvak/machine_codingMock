@@ -1,0 +1,118 @@
+@import "tailwindcss";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+button,
+input,
+select {
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+p,
+span {
+  overflow-wrap: anywhere;
+}
+
+main {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+  section.mt-10 > .mb-6.flex {
+    flex-wrap: wrap;
+    align-items: stretch;
+  }
+
+  section.mt-10 > .mb-6.flex > div:first-child {
+    flex: 1 1 100%;
+    min-width: 0;
+  }
+
+  section.mt-10 > .mb-6.flex > div:nth-child(2) {
+    flex: 1 1 620px;
+    width: 100%;
+    min-width: 0;
+  }
+
+  section.mt-10 > .mb-6.flex > button {
+    align-self: end;
+  }
+}
+
+@media (max-width: 640px) {
+  header {
+    padding: 1rem !important;
+  }
+
+  header h1 {
+    font-size: 1.25rem !important;
+    line-height: 1.75rem !important;
+  }
+
+  main {
+    padding: 1rem !important;
+  }
+
+  main > .grid {
+    gap: 0.75rem !important;
+  }
+
+  .rounded-xl.border {
+    padding: 1rem !important;
+  }
+
+  section.mt-10 {
+    margin-top: 2rem !important;
+  }
+
+  section.mt-10 > .mb-6.flex {
+    flex-direction: column;
+  }
+
+  section.mt-10 > .mb-6.flex > div,
+  section.mt-10 > .mb-6.flex > button {
+    width: 100%;
+  }
+
+  section.mt-10 > .mb-6.flex > button {
+    align-self: stretch;
+  }
+
+  section.mt-10 > .mb-6.flex > .mt-4.grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  section.mt-10 > .grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .rounded-xl.border > .flex.items-start,
+  .rounded-xl.border > .mt-5.flex {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .rounded-xl.border > .mt-5.flex select,
+  .rounded-xl.border > .mt-5.flex button {
+    width: 100%;
+  }
+
+  .rounded-xl.border-dashed {
+    padding: 2rem 1rem !important;
+  }
+}
